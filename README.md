@@ -1,4 +1,7 @@
 # nix-config
 Nix Conofiguration
 
-## TEST
+## Update Flake
+''' bash
+nix flake update --commit-lock-file
+'''
