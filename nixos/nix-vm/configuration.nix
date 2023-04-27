@@ -18,6 +18,13 @@
     ./hardware-configuration.nix
   ];
 
+  # TODO: This is just an example, be sure to use whatever bootloader you prefer
+  #boot.loader.systemd-boot.enable = true;
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+  boot.loader.grub.useOSProber = true;
+
+
   # VMWare Guest Addons
   virtualisation.vmware.guest.enable = true;
 
@@ -117,14 +124,6 @@
   };
   
 
-  # TODO: This is just an example, be sure to use whatever bootloader you prefer
-  boot.loader.systemd-boot.enable = true;
-  #boot.loader.grub.enable = true;
-  #boot.loader.grub.device = "/dev/sda";
-  #boot.loader.grub.useOSProber = true;
-
-
-
   # TODO: Configure your system-wide user settings (groups, etc), add more users as needed.
   users.users = {
     # FIXME: Replace with your username
@@ -146,7 +145,7 @@
 
       openssh.authorizedKeys.keys = [
         # TODO: Add your SSH public key(s) here, if you plan on using SSH to connect
-        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVruAVN+9oUFK3EoLHZeGSdbF8G3DpFrVSoZHBdjgnG4Q61Q7nV4cT7W8Uw61QVdYCXdHkXRnPqeXkLBXATtpNtg0V7IFckVGOU9qDx5R6FYAlcvqJ4a9jvba0FaSkgzIlzDMvpnQ1Liwp2iNAL/pDKUDrGB4NIMSBMqefc7/yzkU6FMk2ygWo6+VMb0wdzw8p2mabYy0vjm1V9kP+qcYgccUNMl5BgslgHvaQ18hKu6Of95+zYlSYJbJynCCofw5WHZVkz69ce5WXPI88ucARiJ3xMxTTSiY4ZxQJQmtC1ftY2jxJ+jmUhvDUupz0bnpybdgCuF43etuR9wi8ReXx swisi        
+        "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDVruAVN+9oUFK3EoLHZeGSdbF8G3DpFrVSoZHBdjgnG4Q61Q7nV4cT7W8Uw61QVdYCXdHkXRnPqeXkLBXATtpNtg0V7IFckVGOU9qDx5R6FYAlcvqJ4a9jvba0FaSkgzIlzDMvpnQ1Liwp2iNAL/pDKUDrGB4NIMSBMqefc7/yzkU6FMk2ygWo6+VMb0wdzw8p2mabYy0vjm1V9kP+qcYgccUNMl5BgslgHvaQ18hKu6Of95+zYlSYJbJynCCofw5WHZVkz69ce5WXPI88ucARiJ3xMxTTSiY4ZxQJQmtC1ftY2jxJ+jmUhvDUupz0bnpybdgCuF43etuR9wi8ReXx swisi"        
       ];
     };
   };
