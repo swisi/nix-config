@@ -63,7 +63,7 @@
           specialArgs = { inherit inputs outputs; };
           modules = [
             # > Our main nixos configuration file <
-            ./nixos/nix-vm/configuration.nix
+            ./hosts/nix-vm/configuration.nix
           ];
         };
       };
