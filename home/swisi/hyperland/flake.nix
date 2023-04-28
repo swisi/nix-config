@@ -13,7 +13,7 @@
   };
 
   outputs = {nixpkgs, home-manager, hyprland, ...}: {
-    homeConfigurations."swisi@hnix-vm" = home-manager.lib.homeManagerConfiguration {
+    homeConfigurations."swisi" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
       modules = [
