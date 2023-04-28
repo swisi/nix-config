@@ -13,12 +13,28 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # TODO: Add any other flake you might need
-    # hardware.url = "github:nixos/nixos-hardware";
+    hardware.url = "github:nixos/nixos-hardware";
+    impermanence.url = "github:nix-community/impermanence";
+    nix-colors.url = "github:misterio77/nix-colors";
+    sops-nix.url = "github:mic92/sops-nix";
 
-    # Shameless plug: looking for a way to nixify your themes and make
-    # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    hydra.url = "github:nixos/hydra";
+    hyprland.url = "github:hyprwm/hyprland";
+    hyprwm-contrib.url = "github:hyprwm/contrib";
+    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+
+    website.url = "github:misterio77/website";
+    #paste-misterio-me.url = "github:misterio77/paste.misterio.me";
+    #yrmos.url = "github:misterio77/yrmos";
+
+    # Overridable (--override-inputs) "parameters"
+    # Cursed stuff, but hey it works.
+    true.url = "github:boolean-option/true";
+    false.url = "github:boolean-option/false";
+
+    dark-mode = true;
+
+
   };
 
   outputs = { self, nixpkgs, home-manager, ... }@inputs:
