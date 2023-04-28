@@ -12,6 +12,14 @@
 
     # You can also split up your configuration and import pieces of it here:
     # ./nvim.nix
+    ./global
+    ./features/desktop/hyprland
+    #./features/desktop/wireless
+    ./features/productivity
+    ./features/pass
+    ./features/games
+
+
   ];
 
   nixpkgs = {
